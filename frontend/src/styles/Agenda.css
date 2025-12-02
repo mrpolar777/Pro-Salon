@@ -1,0 +1,63 @@
+/* src/styles/Agenda.css */
+.agenda-root { width: 100%; }
+.agenda-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; }
+.card { background:#fff; border-radius:10px; padding:12px; box-shadow: 0 6px 18px rgba(0,0,0,0.04); }
+.agenda-table table { width:100%; border-collapse:collapse; }
+.agenda-table th, .agenda-table td { text-align:left; padding:10px 8px; border-bottom:1px solid rgba(0,0,0,0.04); vertical-align:middle; }
+.time-small { color:#666; font-size:12px; }
+.actions { display:flex; gap:6px; }
+.btn { padding:8px 12px; border-radius:8px; cursor:pointer; }
+.btn-primary { background:#c77b59; color:white; border:none; display:inline-flex; gap:8px; align-items:center; }
+.btn-muted { background:transparent; border:1px solid #ccc; }
+.btn-ghost { background:transparent; border:none; color:#666; cursor:pointer; font-size:14px; }
+.btn-danger { background:#c92a2a; color:white; border:none; }
+
+/* status small badges */
+.status { padding:6px 8px; border-radius:999px; font-size:13px; display:inline-block; }
+.status-marcado { background:#fff3cd; color:#6b4f12; }
+.status-confirmado { background:#d4edda; color:#155724; }
+.status-em\ andamento, .status-em\andamento { background:#cfe2ff; color:#084298; }
+.status-cancelado { background:#f8d7da; color:#842029; }
+
+/* modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(12,12,12,0.45);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index: 1200;
+  padding: 20px;
+}
+
+/* modal box */
+.modal {
+  width: 720px;
+  max-width: calc(100% - 40px);
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.25);
+}
+.confirm-modal { width:420px; padding:20px; border-radius:10px; background:#fff; }
+
+/* modal header and body */
+.modal-header { display:flex; justify-content:space-between; align-items:center; padding:16px 18px; border-bottom:1px solid rgba(0,0,0,0.05); }
+.modal-body { padding:16px 18px; display:flex; flex-direction:column; gap:10px; max-height:70vh; overflow:auto; }
+.modal-body label { display:flex; flex-direction:column; gap:6px; font-size:14px; }
+.modal-body input[type="text"], .modal-body input[type="datetime-local"], .modal-body select, .modal-body textarea, .modal-body input[type="number"] {
+  padding:10px; border-radius:8px; border:1px solid rgba(0,0,0,0.08); font-size:14px;
+}
+.modal-actions { display:flex; justify-content:flex-end; gap:8px; margin-top:8px; }
+
+.form-error { color:#b30000; padding:8px 6px; background:#fff0f0; border-radius:6px; }
+
+/* small states */
+.loading, .error, .muted { padding:12px; color:#666; text-align:center; }
+
+/* responsividade */
+@media(max-width:860px){
+  .modal{ width: 100%; max-width: 760px; margin: 8px; }
+  .agenda-table th, .agenda-table td { font-size:13px; padding:8px; }
+}

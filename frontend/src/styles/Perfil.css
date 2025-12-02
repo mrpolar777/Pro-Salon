@@ -1,0 +1,102 @@
+.perfil-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  background: #fff0f5;
+  min-height: 100vh;
+}
+
+.perfil-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.perfil-card h2 {
+  text-align: center;
+  color: #e91e63;
+  margin-bottom: 20px;
+}
+
+.perfil-info p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.btn-editar {
+  display: block;
+  margin: 25px auto 0;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-editar:hover {
+  background-color: #c2185b;
+}
+
+.perfil-form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+.perfil-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+.perfil-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-salvar {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-salvar:hover {
+  background-color: #388e3c;
+}
+
+.btn-cancelar {
+  background-color: #ccc;
+  border: none;
+  color: #333;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-cancelar:hover {
+  background-color: #b0b0b0;
+}
+
+.perfil-loading,
+.perfil-erro {
+  text-align: center;
+  color: #555;
+  font-size: 18px;
+  margin-top: 50px;
+}

@@ -1,0 +1,104 @@
+/* src/styles/Dashboard.css */
+:root{
+  --primary: #c77b59; /* marrom/terracota */
+  --primary-2: #f7d9cf; /* pêssego claro */
+  --text: #111;
+  --muted: #8b8b8b;
+  --card-bg: #fff;
+  --accent: #eedaef;
+}
+
+/* estrutura */
+.dashboard-root {
+  width: 100%;
+}
+
+/* KPI row */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.kpi-card {
+  background: linear-gradient(180deg, #fff 0%, #fff 60%);
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 18px rgba(199,123,89,0.08);
+  border: 1px solid rgba(199,123,89,0.08);
+}
+
+.kpi-title { font-size: 13px; color: var(--muted); margin-bottom:6px; }
+.kpi-value { font-size: 22px; font-weight:700; color: var(--text); }
+.kpi-sub { font-size: 12px; color: #4b8a6e; margin-top:6px; }
+.kpi-icon { color: var(--primary); }
+
+/* content row */
+.content-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+}
+
+/* card base */
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  border: 1px solid rgba(199,123,89,0.06);
+}
+
+/* left column list */
+.card-list .card-header, .card-schedule .card-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+.card-list h3, .card-schedule h3 { margin:0; font-size:16px; color:var(--text); }
+.see-all { font-size:13px; color:var(--primary); text-decoration:none; }
+
+/* schedule list items */
+.schedule-list { display:flex; flex-direction:column; gap:10px; }
+.schedule-item {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px;
+  border-radius:8px;
+  background: linear-gradient(180deg,#fafafa,#fff);
+  border:1px solid rgba(0,0,0,0.03);
+}
+.si-left .client-name { font-weight:600; color:var(--text); }
+.si-left .service-name { font-size:13px; color:var(--muted); }
+.si-right { text-align:right; }
+.time { font-weight:600; color:var(--muted); }
+.status { font-size:12px; padding:6px 8px; border-radius:999px; display:inline-block; margin-top:6px; }
+.status-marcado { background:#fff3cd; color:#6b4f12; border:1px solid rgba(0,0,0,0.03);}
+.status-confirmado { background:#d4edda; color:#155724; border:1px solid rgba(0,0,0,0.03);}
+.status-emAndamento, .status-emandamento { background:#cfe2ff; color:#084298; border:1px solid rgba(0,0,0,0.03);}
+
+/* Day schedule (right column) */
+.day-schedule { max-height:520px; overflow:auto; display:flex; flex-direction:column; gap:8px; padding-right:6px; }
+.slot { display:flex; gap:10px; align-items:center; padding:10px; border-radius:8px; border:1px solid rgba(0,0,0,0.03); }
+.slot-time { width:70px; font-weight:600; color:var(--muted); }
+.slot-available { background:#f2fff4; }
+.slot-booked { background:#fff2f0; }
+.slot-now { box-shadow: 0 0 0 3px rgba(199,123,89,0.08); }
+.slot-client { font-weight:700; }
+.slot-service { font-size:13px; color:var(--muted); }
+.slot-free { color:#3a7d46; font-weight:600; }
+
+/* small states */
+.loading, .error, .list-empty { padding:20px; text-align:center; color:var(--muted); }
+
+/* responsividade */
+@media(max-width: 980px){
+  .kpi-row { grid-template-columns: repeat(2,1fr); }
+  .content-row { grid-template-columns: 1fr; }
+}
